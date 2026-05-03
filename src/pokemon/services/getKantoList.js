@@ -2,9 +2,13 @@ import { fetchPokedex } from "./fetchKantoPokedex";
 
 async function getKantoList() {
   try {
+    
     const data = await fetchPokedex();
-    return data.pokemon_entries;
+    return data.results;
+
   } catch (e) {
-    throw new Error(e)
+    console.log(`Error on getKantoList: ${e}`)
   }
 }
+
+export {getKantoList};
