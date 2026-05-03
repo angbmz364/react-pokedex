@@ -5,9 +5,8 @@ async function getTypes(url) {
     return ["Unknown", "Unknown"];
   }
 
-  const data = res.json();
-  const types = [data.types[0].type.name, data.types[1].type.name];
-  return types;
+  const data = await res.json();
+  return data.types.map(t => t.type.name);
 }
 
 export {getTypes};

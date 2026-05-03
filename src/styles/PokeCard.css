@@ -22,6 +22,26 @@ ul {
   align-items: top;
 }
 
+.typesContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.typesContainer > span {
+  background: #fff;
+  width: 80px;
+  text-align: center;
+  padding: .2rem 0;
+  border-radius: 50px;
+}
+
+.pokeCard > main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 h2 {
   font-size: 1.2rem;
 }
