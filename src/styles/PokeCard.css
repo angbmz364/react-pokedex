@@ -1,3 +1,9 @@
+ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  justify-content: center;
+  gap: 1rem;
+}
 .pokeCard {
   background: #F5F4F4;
   box-sizing: border-box;
@@ -7,14 +13,21 @@
   border-radius: 10px;
 }
 
-h2 {
-  font-size: 1.2rem;
-  
+.pokeCard > header {
+  display: flex;
+  justify-content: space-between;
 }
 
-ul {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  justify-content: center;
-  gap: 10px
+.pokeCard > header > h3 {
+  align-items: top;
+}
+
+h2 {
+  font-size: 1.2rem;
+}
+
+h3 {
+  letter-spacing: .8px;
+  font-size: 1rem;
+  font-weight: 800;
 }
