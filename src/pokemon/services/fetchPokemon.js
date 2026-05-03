@@ -1,7 +1,7 @@
-const POKEAPI_POKEDEX = 'https://pokeapi.co/api/v2/pokemon?limit=151&offset=0';
+const POKEAPI_KANTO_LIST = 'https://pokeapi.co/api/v2/pokemon?limit=151&offset=0';
 
 async function fetchPokedex() {
-  const response = await fetch(POKEAPI_POKEDEX);
+  const response = await fetch(POKEAPI_KANTO_LIST);
 
   if (!response.ok) {
     throw new Error("Failed to fetch data")
