@@ -1,6 +1,6 @@
 const POKEAPI_KANTO_LIST = 'https://pokeapi.co/api/v2/pokemon?limit=151&offset=0';
 
-async function fetchPokedex() {
+async function fetchPokemon() {
   const response = await fetch(POKEAPI_KANTO_LIST);
 
   if (!response.ok) {
@@ -10,4 +10,4 @@ async function fetchPokedex() {
   return await response.json();
 }
 
-export {fetchPokedex};
+export {fetchPokemon};
