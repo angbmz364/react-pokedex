@@ -8,8 +8,8 @@ ul {
   background: #F5F4F4;
   box-sizing: border-box;
   padding: 14px 8px 8px 12px;
-  max-height: 150px;
-  max-width: 230px;
+  max-height: 180px;
+  max-width: 250px;
   border-radius: 10px;
 }
 
@@ -36,7 +36,7 @@ ul {
   border-radius: 50px;
 }
 
-.pokeCard > main {
+.pokeCard > div {
   display: flex;
   justify-content: space-between;
   align-items: center;

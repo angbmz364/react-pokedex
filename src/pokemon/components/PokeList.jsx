@@ -2,7 +2,7 @@ import { useEffect } from "react"
 import { getPokeList } from "../services/formatPokeJson"
 import { useState } from "react";
 import PokeCard from "./PokeCard";
-import { getTypes } from "../services/getTypes";
+import { getPokeData } from "../services/getTypes";
 
 export default function PokeList() {
 
@@ -21,7 +21,7 @@ export default function PokeList() {
     <ul>
       {
         pokeList.map( (p, i) => (
-          <PokeCard poke={p.name} id={i+1} key={i+1} getTypes={() => getTypes(p.url)}/>
+          <PokeCard poke={p.name} id={i+1} key={i+1} getPokeData={() => getPokeData(p.url)}/>
         ))
       }
     </ul>
