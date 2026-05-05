@@ -20,8 +20,11 @@ export default function PokeCard({ poke, id, getPokeData }) {
     loadTypes();
   }, []);
 
+
+  let cardClass = 'pokeCard ' + types[0]
+
   return (
-    <div className="pokeCard">
+    <div className={cardClass}>
       <header>
         <h2>
           {capitalize(poke)}
@@ -37,7 +40,7 @@ export default function PokeCard({ poke, id, getPokeData }) {
         <figure>
           <img 
             alt={`${poke} image`} 
-            src={sprite}
+            src={sprite ? sprite : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8H1R_SAhdhNh1vaUFGjmSymzac8GgVrMkkg&s'}
             width={'150px'}></img>
         </figure>
       </div>

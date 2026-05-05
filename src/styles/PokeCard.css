@@ -29,10 +29,11 @@ ul {
 }
 
 .typesContainer > span {
-  background: #fff;
+  background: #ffffff40;
+  color: #3D3D38;
   width: 80px;
   text-align: center;
-  padding: .2rem 0;
+  padding: .2rem .5rem;
   border-radius: 50px;
 }
 
@@ -43,11 +44,78 @@ ul {
 }
 
 h2 {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
+  color: #fff;
 }
 
 h3 {
   letter-spacing: .8px;
+  color: #3D3D38;
+  opacity: .5;
   font-size: 1rem;
   font-weight: 800;
+}
+
+.grass {
+  background: #87C753
+}
+
+.fire {
+  background: #EB7471;
+}
+
+.water {
+  background: #8AC5F8
+}
+
+.bug {
+  background: #70ccb0
+}
+
+.flying {
+  background: #7DD3FC;
+}
+
+.normal {
+  background: #D4D4D4;
+}
+
+.poison {
+  background: #B84FB9;
+}
+
+.electric {
+  background: #FFCF4A;
+}
+
+.ground {
+  background: #E1C169;
+}
+
+.fighting {
+  background: #C03038;
+}
+
+.psychic {
+  background: #F85888;
+}
+
+.ghost {
+  background: #B84FB9;
+}
+
+.dragon {
+  background: #7138F8;
+}
+
+.ice {
+  background: #7DD3FC;
+}
+
+.rock {
+  background: #E1C169;
+}
+
+.fairy {
+  background: #FAD9E6;
 }
