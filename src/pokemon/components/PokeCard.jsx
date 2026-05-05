@@ -31,18 +31,24 @@ export default function PokeCard({ poke, id, getPokeData }) {
         </h2>
         <h3>#{String(id).padStart(3, "0")} </h3>
       </header>
-      <div>
+      <div className="relative">
         <div className="typesContainer">
           {types.map((i) => (
             <span key={i}>{capitalize(i)}</span>
           ))}
         </div>
-        <figure>
+        <figure style={ {zIndex: '1'} }>
           <img 
             alt={`${poke} image`} 
             src={sprite ? sprite : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8H1R_SAhdhNh1vaUFGjmSymzac8GgVrMkkg&s'}
             width={'150px'}></img>
         </figure>
+        <img 
+          className="pokeball"
+          src={'../../../public/pokeball.jpg'}
+          alt="pokeball image"
+          width={'150px'}
+        />
       </div>
     </div>
   );

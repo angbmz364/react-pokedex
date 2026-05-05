@@ -11,6 +11,7 @@ ul {
   max-height: 180px;
   max-width: 250px;
   border-radius: 10px;
+  overflow: hidden;
 }
 
 .pokeCard > header {
@@ -118,4 +119,15 @@ h3 {
 
 .fairy {
   background: #FAD9E6;
+}
+
+.relative {
+  position: relative;
+}
+
+.pokeball {
+  position: absolute;
+  right: -20px;
+  bottom: 0;
+  opacity: .3;
 }
