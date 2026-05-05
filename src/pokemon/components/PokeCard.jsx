@@ -2,21 +2,38 @@ import { useState } from "react";
 import "../../styles/PokeCard.css";
 import { useEffect } from "react";
 
+const pokeCache = {};
+
 export default function PokeCard({ poke, getPokeData }) {
-  const [types, setTypes] = useState([]);
-  const [id, setId] = useState(1);
-  const [sprite, setSprite] = useState('');
+
+  const cached = pokeCache[poke];
+
+  const [types, setTypes] = useState(cached?.types || []);
+  const [id, setId] = useState(cached?.id || 1);
+  const [sprite, setSprite] = useState(cached?.sprite || 'https://assets.pokeos.com/pokemon/home/render/201-a.png');
 
   const capitalize = (string) => {
     return string.charAt(0).toUpperCase() + string.split("").slice(1).join("")
   }
 
   useEffect(() => {
+    if (pokeCache[poke]) return;
     async function loadTypes() {
+      
       const data = await getPokeData();
-      setSprite(data.sprites.front_default)
-      setTypes(data.types.map(t => t.type.name));
-      setId(data.id)
+      
+      const formatted = {
+        sprite: data.sprites.front_default,
+        types: data.types.map(t => t.type.name),
+        id: data.id
+      };
+
+      pokeCache[poke] = formatted;
+
+      setSprite(formatted.sprite);
+      setTypes(formatted.types);
+      setId(formatted.id);
+      console.log(pokeCache)
     }
     loadTypes();
   }, []);
@@ -41,7 +58,7 @@ export default function PokeCard({ poke, getPokeData }) {
         <figure style={ {zIndex: '1'} }>
           <img 
             alt={`${poke} image`} 
-            src={sprite ? sprite : 'https://assets.pokeos.com/pokemon/home/render/201-a.png'}
+            src={sprite}
             width={'150px'}></img>
         </figure>
         <img 
