@@ -33,7 +33,6 @@ export default function PokeCard({ poke, getPokeData }) {
       setSprite(formatted.sprite);
       setTypes(formatted.types);
       setId(formatted.id);
-      console.log(pokeCache)
     }
     loadTypes();
   }, []);
