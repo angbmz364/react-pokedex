@@ -1,10 +1,10 @@
 import "../../styles/Header.css";
 
-export default function Header() {
+export default function Header( {search, setSearch} ) {
   return (
     <nav>
       <h1>What Pokemon <br/>are you looking for?</h1>
-      <form>
+      <form onSubmit={(e) => e.preventDefault()} >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -18,7 +18,12 @@ export default function Header() {
           />
         </svg>
 
-        <input type="text" placeholder="Search..." />
+        <input 
+          type="text" 
+          placeholder="Search..."
+          value={search}
+          onChange={(e) => setSearch(e.target.value)} 
+        />
       </form>
     </nav>
   );
