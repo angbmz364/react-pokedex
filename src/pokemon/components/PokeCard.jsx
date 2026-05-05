@@ -40,12 +40,12 @@ export default function PokeCard({ poke, id, getPokeData }) {
         <figure style={ {zIndex: '1'} }>
           <img 
             alt={`${poke} image`} 
-            src={sprite ? sprite : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8H1R_SAhdhNh1vaUFGjmSymzac8GgVrMkkg&s'}
+            src={sprite ? sprite : 'https://assets.pokeos.com/pokemon/home/render/201-a.png'}
             width={'150px'}></img>
         </figure>
         <img 
           className="pokeball"
-          src={'../../../public/pokeball.jpg'}
+          src={'/pokeball.jpg'}
           alt="pokeball image"
           width={'150px'}
         />
