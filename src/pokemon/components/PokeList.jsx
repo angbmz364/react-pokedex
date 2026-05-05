@@ -24,10 +24,9 @@ export default function PokeList( {search} ) {
   return (
     <ul style={ {marginBottom: '30px'} }>
       {
-        filteredList.map( (p, i) => (
+        filteredList.map( (p) => (
           <PokeCard 
             poke={p.name} 
-            id={i+1} 
             key={p.name} 
             getPokeData={() => getPokeData(p.url)}
           />

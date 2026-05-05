@@ -2,8 +2,9 @@ import { useState } from "react";
 import "../../styles/PokeCard.css";
 import { useEffect } from "react";
 
-export default function PokeCard({ poke, id, getPokeData }) {
+export default function PokeCard({ poke, getPokeData }) {
   const [types, setTypes] = useState([]);
+  const [id, setId] = useState(1);
   const [sprite, setSprite] = useState('');
 
   const capitalize = (string) => {
@@ -15,8 +16,8 @@ export default function PokeCard({ poke, id, getPokeData }) {
       const data = await getPokeData();
       setSprite(data.sprites.front_default)
       setTypes(data.types.map(t => t.type.name));
+      setId(data.id)
     }
-
     loadTypes();
   }, []);
 
