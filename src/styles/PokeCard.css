@@ -4,6 +4,11 @@ ul {
   place-items: center;
   gap: 1rem;
 }
+
+.pokeCard:hover {
+  transform: scale(1.02);
+}
+
 .pokeCard {
   background: #F5F4F4;
   box-sizing: border-box;
@@ -12,6 +17,7 @@ ul {
   max-width: 250px;
   border-radius: 10px;
   overflow: hidden;
+  transition: all .2s ease;
 }
 
 .pokeCard > header {
